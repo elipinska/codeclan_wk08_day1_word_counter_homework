@@ -16,11 +16,14 @@ public class WordCountProvider {
         HashMap<String, Integer> wordHash = new HashMap();
 
         for (String word:separatedWords) {
-            if (!wordHash.containsKey(word)) {
-                wordHash.put(word, 0);
+
+            String wordLowerCase = word.toLowerCase();
+
+            if (!wordHash.containsKey(wordLowerCase)) {
+                wordHash.put(wordLowerCase, 0);
             }
-            int value = (int) wordHash.get(word);
-            wordHash.put(word, value + 1);
+            int value = (int) wordHash.get(wordLowerCase);
+            wordHash.put(wordLowerCase, value + 1);
         }
 
         String result = "";
