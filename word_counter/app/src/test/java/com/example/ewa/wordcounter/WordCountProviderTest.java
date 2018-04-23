@@ -13,4 +13,9 @@ public class WordCountProviderTest {
         assertEquals("2", counter.getWordCount("Hello world"));
     }
 
+    @Test
+    public void getWordHash() {
+        WordCountProvider counter = new WordCountProvider();
+        assertEquals("name: 2\nis: 1\nMy: 2\n", counter.getWordHash("My name is My name"));
+    }
 }

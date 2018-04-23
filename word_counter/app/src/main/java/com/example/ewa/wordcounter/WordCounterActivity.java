@@ -30,7 +30,7 @@ public class WordCounterActivity extends AppCompatActivity {
         Log.d(getClass().toString(), "The text entered was: " + textEntered);
         WordCountProvider counter = new WordCountProvider();
         wordsCounted.setText("Words counted:");
-        answer.setText(counter.getWordCount(mainTextfieldEditText.getText().toString()));
+        answer.setText(counter.getWordHash(mainTextfieldEditText.getText().toString()));
     }
 
 
